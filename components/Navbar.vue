@@ -6,7 +6,6 @@ const router = useRouter()
 const showDropdown = ref(false)
 const userProfile = ref(null)
 
-// Add function to fetch profile
 const fetchUserProfile = async () => {
   if (!user.value) return
 
@@ -21,6 +20,20 @@ const fetchUserProfile = async () => {
     userProfile.value = data
   } catch (error) {
     console.error('Error fetching profile:', error)
+  }
+}
+
+const signOut = async () => {
+  try {
+    const { error } = await client.auth.signOut()
+    if (error) throw error
+
+    userProfile.value = null
+    showDropdown.value = false
+
+    router.push('/login')
+  } catch (error) {
+    console.error('Error signing out:', error)
   }
 }
 
