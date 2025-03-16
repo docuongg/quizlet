@@ -53,7 +53,7 @@ const signInWithGoogle = async () => {
       <button
         @click="signInWithGoogle"
         :disabled="isLoading"
-        class="w-full py-2 border rounded flex items-center justify-center text-gray-600 hover:bg-gray-50 transition-colors"
+        class="w-full py-2 border cursor-pointer rounded flex items-center justify-center text-gray-600 hover:bg-gray-50 transition-colors"
       >
         <Icon name="flat-color-icons:google" class="h-5 w-5 mr-2" />
         {{ isLoading ? 'Connecting...' : 'Continue with Google' }}
