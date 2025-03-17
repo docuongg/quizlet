@@ -20,6 +20,7 @@ export default defineNuxtConfig({
     redirect: false
   },
   typescript: {
-    typeCheck: true
+    typeCheck: true,
+    strict: true,
   },
 })
