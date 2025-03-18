@@ -78,10 +78,10 @@ const playQuiz = (quizId) => {
               Play
             </NuxtLink>
             <NuxtLink
-              :to="`/quizzes/${quizz.id}/edit`"
+              :to="`/quizzes/${quizz.id}/swipe-mode`"
               class="flex-1 border border-blue-600 text-blue-600 px-4 py-2 rounded hover:bg-blue-50 text-center"
             >
-              Edit
+              Practice
             </NuxtLink>
           </div>
         </div>
