@@ -19,4 +19,8 @@ export default defineNuxtConfig({
   supabase: {
     redirect: false
   },
+  typescript: {
+    typeCheck: true,
+    strict: true,
+  },
 })

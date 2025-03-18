@@ -34,7 +34,7 @@ const playQuiz = (quizId) => {
 <template>
   <div class="container mx-auto px-4 py-8">
     <div class="flex justify-between items-center mb-8">
-      <h1 class="text-3xl font-bold">My Quizzes</h1>
+      <h1 class="text-3xl font-bold">Explore Quizzes</h1>
       <NuxtLink
         to="/quizzes/new"
         class="bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700"
@@ -57,7 +57,7 @@ const playQuiz = (quizId) => {
       >
         <div class="p-6">
           <h2 class="text-xl font-bold mb-2">{{ quizz.title }}</h2>
-          <p class="text-gray-600 mb-4 line-clamp-2">{{ quizz.description }}</p>
+          <p class="text-gray-600 mb-4 line-clamp-2">{{ quizz.description || "Explore now!" }}</p>
 
           <div class="flex items-center justify-between mb-4">
             <div class="flex items-center space-x-4">
@@ -78,10 +78,10 @@ const playQuiz = (quizId) => {
               Play
             </NuxtLink>
             <NuxtLink
-              :to="`/quizzes/${quizz.id}/edit`"
+              :to="`/quizzes/${quizz.id}/swipe-mode`"
               class="flex-1 border border-blue-600 text-blue-600 px-4 py-2 rounded hover:bg-blue-50 text-center"
             >
-              Edit
+              Practice
             </NuxtLink>
           </div>
         </div>
